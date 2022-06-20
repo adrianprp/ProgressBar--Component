@@ -1,0 +1,25 @@
+<div class="bar__container">
+  <div
+    class="bar"
+    [attr.beginDate]="this.data.beginDate | date: 'd MMM  y'"
+    [attr.endDate]="this.data.endDate | date: 'd MMM  y'"
+  >
+    <img src="../../assets/images/carret.svg" alt="" class="bar__left-carret" />
+    <img
+      src="../../assets/images/carret.svg"
+      alt=""
+      class="bar__right-carret"
+    />
+    <img
+      src="../../assets/images/calendar.svg"
+      alt=""
+      class="bar__left-calendar"
+    />
+    <img
+      src="../../assets/images/calendar.svg"
+      alt=""
+      class="bar__right-calendar"
+    />
+    <span [ngStyle]="{ width: value + '%' }" class="bar__progress"></span>
+  </div>
+</div>

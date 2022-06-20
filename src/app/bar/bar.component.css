@@ -1,0 +1,64 @@
+.bar {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  height: 30px;
+  box-shadow: 0 0 10px rgba(44, 39, 39, 0.5);
+  border-radius: 12px;
+  background-image: url("../../assets/images/background.png");
+  z-index: 100;
+}
+.bar::before {
+  content: attr(beginDate);
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  z-index: 5;
+}
+.bar::after {
+  content: attr(endDate);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 5;
+}
+.bar__container {
+  background-color: #dfe1e5;
+  width: 50%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar__progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(144, 158, 180, 1) 0%,
+    rgba(37, 50, 73, 1) 100%
+  );
+  border-radius: 12px;
+}
+.bar__left-carret {
+  position: absolute;
+  top: 40px;
+}
+.bar__right-carret {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.bar__left-calendar {
+  position: absolute;
+  top: 51px;
+  left: 0;
+}
+.bar__right-calendar {
+  position: absolute;
+  top: 51px;
+  right: 85px;
+}
